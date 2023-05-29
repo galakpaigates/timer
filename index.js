@@ -12,6 +12,17 @@ document.addEventListener("DOMContentLoaded", (event) =>
     let newSecond;
     let interval;
     let previousStartBtnValue = "Start";
+    let beep = document.getElementById("beep");
+
+    function playSoundGameOver()
+    {
+        beep.play();
+    }
+
+    function stopSound()
+    {
+        allAudio.suspend();
+    }
 
     function minIsZero(min, sec)
     {
@@ -25,6 +36,7 @@ document.addEventListener("DOMContentLoaded", (event) =>
                 if (sec < 1)
                 {
                     mode = "stop";
+                    playSoundGameOver();
                 }
             }
         }, 1000)
@@ -60,6 +72,7 @@ document.addEventListener("DOMContentLoaded", (event) =>
                 if (sec < 1 && min < 1)
                 {
                     mode = "stop";
+                    playSoundGameOver();
                 }
             }
         }, 1000);
@@ -94,6 +107,7 @@ document.addEventListener("DOMContentLoaded", (event) =>
                 {
                     secCountSpan.innerText = "0";
                     mode = "stop";
+                    playSoundGameOver();
                 }
             }
         }, 1000);
@@ -178,7 +192,8 @@ document.addEventListener("DOMContentLoaded", (event) =>
             timerDiv.style.display = "none";
             startPauseTimer.style.backgroundColor = "limegreen";
             startPauseTimer.value = "Start";
-
+            beep.pause();
+            beep.currentTime = 0;
             clearInterval(interval);
         }
 
@@ -186,6 +201,8 @@ document.addEventListener("DOMContentLoaded", (event) =>
         {
             startPauseTimer.style.backgroundColor = "limegreen";
             startPauseTimer.value = "Start";
+            beep.pause();
+            beep.currentTime = 0;
             clearInterval(interval);
         }
     });
