@@ -1,0 +1,87 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+    font-family: 'Verdana', sans-serif;
+    outline: none;
+    border: none;
+}
+
+body {
+    margin: 40px auto;
+    text-align: center;
+    background: linear-gradient(to right, #37645b, #416a59);
+}
+
+#mainBody {
+    margin-top: 35vh;
+}
+
+* input[type="number"] {
+    text-align: center;
+    padding: 4px;
+    width: 117px;
+    height: 70px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 3px #77818b;
+    color: #2c394a;
+    font-size: 23px;
+    margin: 7px;
+    cursor: text;
+}
+
+#buttonsDiv {
+    margin-top: 7px;
+}
+
+#startPauseTimer {
+    background-color: limegreen;
+    padding: 12px;
+    font-size: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#resetTimer {
+    background-color: gray;
+    padding: 12px;
+    font-size: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#stopTimer {
+    background-color: crimson;
+    padding: 12px;
+    font-size: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#startTimer:hover,
+#resetTimer:hover,
+#stopTimer:hover {
+    opacity: 0.8;
+}
+
+#startTimer:active,
+#resetTimer:active,
+#stopTimer:active {
+    opacity: 0.6;
+}
+
+
+#timerDiv {
+    font-size: 85px;
+    font-weight: 1000;
+    color: white;
+    display: none;
+}

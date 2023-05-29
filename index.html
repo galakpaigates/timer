@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer - Phenom_J</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main id="mainBody">
+        <div id="getInputDiv">
+            <input type="number" name="minute" placeholder="Mins" id="minInput">
+            <input type="number" name="second" placeholder="Secs" id="secInput">
+        </div>
+
+        <div id="timerDiv">
+            <span id="minCountSpan"></span>:<span id="secCountSpan"></span>
+        </div>
+
+        <div id="buttonsDiv">
+            <input type="submit" value="Start" id="startPauseTimer">
+            <input type="button" value="Reset" id="resetTimer">
+            <input type="button" value="Stop" id="stopTimer">
+        </div>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>
