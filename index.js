@@ -118,43 +118,46 @@ document.addEventListener("DOMContentLoaded", (event) =>
         newMinute = Number(minInput.value);
         newSecond = Number(secInput.value);
 
-        if (newMinute > 0 || newSecond > 0)
+        if (newMinute > -1 && newSecond > -1)
         {
-            mode = "count";
-
-            getInputDiv.style.display = "none";
-
-            if (previousStartBtnValue === "Start")
+            if (newMinute > 0 || newSecond > 0)
             {
-                minCountSpan.innerText = newMinute;
-                secCountSpan.innerText = newSecond;
-            }
+                mode = "count";
 
-            if (previousStartBtnValue === "Pause")
-            {
-                newMinute = Number(minCountSpan.innerText);
-                newSecond = Number(secCountSpan.innerText);
-            }
+                getInputDiv.style.display = "none";
 
-            previousStartBtnValue = startPauseTimer.value;
-            startPauseTimer.style.backgroundColor = "cornflowerblue";
-            startPauseTimer.value = "Pause";
+                if (previousStartBtnValue === "Start")
+                {
+                    minCountSpan.innerText = newMinute;
+                    secCountSpan.innerText = newSecond;
+                }
 
-            timerDiv.style.display = "block";
+                if (previousStartBtnValue === "Pause")
+                {
+                    newMinute = Number(minCountSpan.innerText);
+                    newSecond = Number(secCountSpan.innerText);
+                }
 
-            if (newMinute > 0 && newSecond === 0)
-            {
-                secIsZero(newMinute, newSecond);
-            }
+                previousStartBtnValue = startPauseTimer.value;
+                startPauseTimer.style.backgroundColor = "cornflowerblue";
+                startPauseTimer.value = "Pause";
 
-            if (newSecond > 0 && newMinute === 0)
-            {
-                minIsZero(newMinute, newSecond);
-            }
+                timerDiv.style.display = "block";
 
-            if (newSecond > 0 && newMinute > 0)
-            {
-                minNorSecIsZero(newMinute, newSecond);
+                if (newMinute > 0 && newSecond === 0)
+                {
+                    secIsZero(newMinute, newSecond);
+                }
+
+                if (newSecond > 0 && newMinute === 0)
+                {
+                    minIsZero(newMinute, newSecond);
+                }
+
+                if (newSecond > 0 && newMinute > 0)
+                {
+                    minNorSecIsZero(newMinute, newSecond);
+                }
             }
         }
     }
