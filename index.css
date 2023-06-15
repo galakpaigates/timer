@@ -29,11 +29,21 @@ body {
     height: 70px;
     border: none;
     outline: none;
-    box-shadow: 0px 0px 3px #77818b;
-    color: #2c394a;
-    font-size: 23px;
+    box-shadow: 0px 0px 7px #878f96;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
     margin: 7px;
+    background-color: transparent;
     cursor: text;
+}
+
+#minInput {
+    border-top-left-radius: 15px;
+}
+
+#secInput {
+    border-top-right-radius: 15px;
 }
 
 #buttonsDiv {
@@ -48,6 +58,7 @@ body {
     color: white;
     cursor: pointer;
     font-weight: 600;
+    border-bottom-left-radius: 15px;
 }
 
 #resetTimer {
@@ -68,20 +79,20 @@ body {
     color: white;
     cursor: pointer;
     font-weight: 600;
+    border-bottom-right-radius: 15px;
 }
 
-#startTimer:hover,
+#startPauseTimer:hover,
 #resetTimer:hover,
 #stopTimer:hover {
     opacity: 0.8;
 }
 
-#startTimer:active,
+#startPauseTimer:active,
 #resetTimer:active,
 #stopTimer:active {
     opacity: 0.6;
 }
-
 
 #timerDiv {
     font-size: 85px;
